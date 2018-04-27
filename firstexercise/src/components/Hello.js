@@ -1,9 +1,33 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import FriendsListItems from './FriendsListItems';
 
 
 class Hello extends Component {
-    render() {
-    return <h1>Hello, {this.props.name}</h1>
+
+  render() {
+
+    let FriendsList;
+
+    if(this.props.friendlist){
+      FriendsList = this.props.friendlist.map( friend => {
+       
+        console.log(friend)
+
+          return (
+            <FriendsListItems key={friend.id} friend={friend} />
+          )
+      })
     }
+
+    return (
+      <div >
+
+       {FriendsList} <br /> 
+      This is a digital Craft class <br />
+       
+      </div>
+    );
+  }
 }
+
 export default Hello
