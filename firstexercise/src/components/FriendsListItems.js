@@ -10,7 +10,7 @@ class FriendsListItems extends Component {
       return (
        <li>
            <b>{this.props.friend.name}</b> - {this.props.friend.age}
-           agecheck
+            {agecheck}
            
         
        </li>
