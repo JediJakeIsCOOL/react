@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import uuid from 'uuid'
 
 class AddContact extends Component {
     constructor(){
@@ -20,6 +20,7 @@ class AddContact extends Component {
             alert('name is required')
         }else{
             this.setState({newContact:{
+                id: uuid.v4,
                 name: this.refs.name.value,
                 city: this.refs.city.value,
                 state: this.refs.state.value
